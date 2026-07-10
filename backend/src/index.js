@@ -8,6 +8,7 @@ import fs from "fs";
 
 
 import dotenv from "dotenv";
+import job from "./lib/cron.js";
 dotenv.config();
 
 
@@ -51,6 +52,7 @@ const startServer = async () => {
 
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
+      if (process.env.NODE_ENV === 'production') job.start();
     });
   } catch (error) {
     console.error(error);
