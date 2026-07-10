@@ -11,13 +11,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
         trim: true,
-        lowerCase: true,
+        lowercase: true,
         required: true,
     },
     fullName: {
         type: String,
         trim: true,
-        lowerCase: true,
         required: true,
     },
     profilePic: {
