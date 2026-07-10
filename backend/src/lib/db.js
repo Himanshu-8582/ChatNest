@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 const connectDB = async () => {
   try {
     console.log(`Final URI = ${process.env.MONGO_URI}/ChatNest`);
-    const connectedInstance = await mongoose.connect(process.env.MONGO_URI);
+    const connectedInstance = await mongoose.connect(
+      `${process.env.MONGO_URI}/ChatNest`,
+    );
     console.log(
       `MongoDB connected || Host:  ${connectedInstance.connection.host}`,
     );
