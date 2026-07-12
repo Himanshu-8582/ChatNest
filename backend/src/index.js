@@ -17,8 +17,8 @@ import fs from "fs";
 
 import job from "./lib/cron.js";
 
-import authRoutes from '../src/routes/auth.route.js';
-import messagesRoute from '../src/routes/message.route.js';
+import authRoutes from './routes/auth.route.js';
+import messagesRoute from './routes/message.route.js';
 import { app, server } from "./lib/socket.js";
 
 
