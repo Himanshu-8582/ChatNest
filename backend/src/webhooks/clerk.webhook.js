@@ -59,3 +59,29 @@ router.post('/', asyncHandler(async (req, res) => {
 }));
 
 export default router;
+
+
+
+
+// Incoming Webhook
+// ↓
+// Check Signing Secret
+// ↓
+// Read Raw Request Body
+// ↓
+// Verify Webhook Signature
+// ↓
+// Event Type?
+// ├── user.created
+// │
+// ├── user.updated
+// │      ↓
+// │   Extract User Data
+// │      ↓
+// │   Upsert User
+// │
+// └── user.deleted
+//        ↓
+//    Delete User
+// ↓
+// Return Success
