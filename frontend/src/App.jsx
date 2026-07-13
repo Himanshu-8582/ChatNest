@@ -5,9 +5,11 @@ import { Navigate, Route, Routes } from 'react-router';
 import ChatPage from './pages/ChatPage';
 import AuthPage from './pages/AuthPage';
 import { useAuth } from '@clerk/react';
+import PageLoader from './components/PageLoader';
 
 function App() {
   const { isSignedIn, isLoaded } = useAuth();
+  if (!isLoaded) return <PageLoader />;
   return (
     <ThemeProvider>
       <WallpaperProvider>
