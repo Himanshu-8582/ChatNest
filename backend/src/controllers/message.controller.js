@@ -5,6 +5,7 @@ import asyncHandler from "../utils/asyncHandler.js";
 import { hasImageKitConfig, uploadChatMedia } from "../lib/imagekit.js";
 import { ApiError } from "../utils/ApiError.js";
 import { getReceiverSocketId, io } from "../lib/socket.js";
+import mongoose from 'mongoose';
 
 
 export const getUserForSidebar = asyncHandler(async (req, res) => {
