@@ -10,5 +10,6 @@ router.get('/users', getUserForSidebar);
 router.get('/conversations', getConversationsForSidebar);
 router.get('/:id', getMessages);
 router.post('/send/:id', upload.single('media'), sendMessage);
+// this media name must be same in frontend also
 
 export default router;
